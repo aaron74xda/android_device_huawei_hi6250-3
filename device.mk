@@ -38,6 +38,23 @@ $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# NFC
+PRODUCT_PACKAGES += \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras \
+    nfc_nci.pn54x.default
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+PRODUCT_COPY_FILES += \
+    device/huawei/hi6250/rootdir/system/etc/libnfc_brcm_pra_L31.conf:system/etc/libnfc-brcm.conf \
+    device/huawei/hi6250/rootdir/system/etc/libnfc_nxp_pra_L31.conf:system/etc/libnfc-nxp.conf \
+    device/huawei/hi6250/rootdir/system/etc/nfcscc_access.xml:system/etc/nfcscc_access.xml \
+    device/huawei/hi6250/rootdir/system/etc/nfcse_access.xml:system/etc/nfcse_access.xml \
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
