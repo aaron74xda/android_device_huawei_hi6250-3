@@ -37,6 +37,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
 # Blobs
+$(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+
+# Blobs
 $(call inherit-product-if-exists, vendor/huawei/hi6250/hi6250-vendor.mk)
 
 # Camera
