@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Graphics
+PRODUCT_PACKAGES += \
+    libion
+
 # HIDL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
@@ -78,11 +82,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
-
-# Audio
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
-
 
 # Permissions
 PRODUCT_COPY_FILES += \
