@@ -26,6 +26,8 @@
 DEVICE_PATH := device/huawei/hi6250
 
 # Arch
+include build/make/target/board/generic_arm64_a/BoardConfig.mk
+
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
