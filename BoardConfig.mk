@@ -30,3 +30,7 @@ DEVICE_PATH := device/huawei/hi6250
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970,hi6250
+
+# Camera
+TARGET_CAMERA_NEEDS_ADD_STATES_IN_ENUMERATE := true
+
