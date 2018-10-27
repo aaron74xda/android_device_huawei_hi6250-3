@@ -31,6 +31,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 # Blobs
 $(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap \
+
 # Device
 $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
 
